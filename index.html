@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="r">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Registeration Page
+    </title>
+</head>
+<body>
+    <h1>Registeration Form</h1>
+   <form method="get">
+    <p>
+        <label for="firstname">Firstname : </label>
+        <input type="text" placeholder="firstname" id="firstname" required><br></p>
+    <p>
+        <label for="lastname">Lastname : </label>
+        <input type="text" placeholder="lastname" required><br></p>
+    <p>
+        <label for="age">Age : </label>
+        <input type="number" placeholder="age" id="age" min="0" max="100" required><br>
+    </p>
+    <p>Gender : <br>
+    <input type="radio"  id="male">
+    <label for="male">Male</label><br>
+    <input type="radio"  id="female">
+    <label for="female">Female</label><br>
+    </p>
+   <p>
+    <label for="birthdate">Birth Date</label>
+    <input type="date" min="01/01/1990" max="01/01/2023"><br>
+   </p>
+   <p>
+    <label for="address">Address :</label><br>
+    <input type="text" size="106" placeholder="House No./Street" id="address"><br>
+    <input type="text" size="106" placeholder="Locality" id="address"><br>
+    <input type="text" size="50" placeholder="City" id="address">
+    <input type="text" size="50" placeholder="Distrct" id="address"><br>
+    </p>
+    <p>
+    <label for="pincode">Pincode : </label>
+    <input type="text" placeholder="code" id="pincode" minlength="6" maxlength="6" required><br>
+    </p>
+    <p>
+        <label for="mobile">Mobile number : </label>
+        <input type="text" placeholder="0000000000" id="mobile" minlength="10" maxlength="10 ">
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+    <p>
+        <input type="reset">
+    </p>
+   </form>
+
+</body>
+</html>
