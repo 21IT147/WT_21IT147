@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change bg color every 1 min</title>
+    <style>
+        .container{
+            margin-top: 10%;
+                margin-left: 20%;
+                margin-right: 20%;
+                padding: 200px;
+                text-align: center;
+                border: 2px solid black;
+                border-radius: 4px;
+                font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        This is Colour changing Background.
+    </div>
+    <script>
+        setInterval(
+            function () {
+                var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                document.body.style.backgroundColor = "#" + randomColor;
+            }, 1000);
+    </script>
+</body>
+
+</html>

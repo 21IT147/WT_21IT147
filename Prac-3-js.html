@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICAL-3</title>
+
+    <style>
+        .container {
+            margin: auto;
+            text-align: center;
+            display: block;
+            width: 1000px;
+            height: 400px;
+            border: 2px solid rgb(255, 39, 75);
+            background-color: rgb(228, 102, 123);
+            border-radius: 4px;
+        }
+
+        .inpt {
+            margin: 20px;
+        }
+
+        #s {
+            text-align: center;
+            font-size: 30px;
+        }
+        .screen{
+            margin: auto;
+            text-align: center;
+            display: block;
+            width: 1000px;
+            height: 400px;
+            border: 2px solid rgb(240, 37, 14);
+            background-color: rgb(235, 79, 61);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p id="s"> Enter Your Data here :</p>
+        Q1.)<input class="inpt" type="text" placeholder="please enter your number " id="q1"><button
+            onclick="primenumbers()">done</button><br>
+        Q2.)<input class="inpt" type="text" placeholder="please enter your string" id="q2"> <button
+            onclick="reversestring()">done</button><br>
+        Q3.)<input class="inpt" type="text" placeholder="please enter your number" id="q3"><button
+            onclick="table()">done</button><br>
+        Q4.)<input class="inpt" type="text" placeholder="enter your birthdate" id="q4"><button
+            onclick="age()">done</button><br>
+    </div>
+    <div class="screen">
+        
+        <p id="hello1">
+         Q1.) Prime Number
+         Output:
+        </p>
+        <br><label>Reverse string is: </label>
+        <p id="hello2">
+            Q2.) Reverse String
+            Output:
+        </p>
+        <p>
+         Q4.)Multiplication Table.
+            Multiplication Table output is in console :
+        </p>
+        <p id="hello3">
+            Q4.) Prime Number
+            Output:
+        </p>
+    </div>
+
+    <script src="Prac-3.js"></script>
+</body>
+
+</html>

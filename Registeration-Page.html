@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Page</title>
+    <style>
+        .container{ 
+            font-size: 20px;
+            padding: 100px 100px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 20px;
+            margin-left: 680px;
+            align-items: center;
+            display: inline-block; 
+            border: 2px solid red;
+            background-color: aqua;
+        }
+        .box{
+            margin: auto;
+            display:inline-block;
+            ;
+        }
+        .x{
+            margin-left: 40%;
+        }
+    </style>
+
+</head>
+<body style="background-color: rgb(140, 202, 218);">
+    <h1 style="text-align: center; color: rgb(1, 9, 15);">Welcome to Registeration Page!!!</h1>
+    <div class="container">
+        <h3 style="color: rgb(1, 9, 15); padding-bottom: 20px; text-align: center;">
+            Enter your Details here
+        </h3>
+    <form method="get" style="color: rgb(1, 9, 15);" name = "myForm" onsubmit="validate()">
+        <label >Event: 
+        <input type="text" id="eventType" value="" ><br><br>
+        </label>
+        <label >Event Listing : <br>
+            <div class="box">
+            Outdoor:<br>                    
+            <input type="checkbox">Basket-ball<br>                   
+            <input type="checkbox">Cricket <br>                             
+            <input type="checkbox">Football-ball<br>                    
+            <input type="checkbox">Volley-ball<br>                    
+            <input type="checkbox">Kabaddi    <br>                     
+            </div>
+            <div class="box">
+            Indoor:<br>
+            <input type="checkbox">Chess<br>
+            <input type="checkbox">Tabel-tennis<br>
+            <input type="checkbox">Badminton<br>
+            <input type="checkbox">Carrom<br>
+            <input type="checkbox">Esports<br>
+            </div><br>
+            <div class="box">
+                Cultural:<br>
+                <input type="checkbox">Dance<br>
+                <input type="checkbox">Singing<br>
+                <input type="checkbox">Drama<br>
+                <input type="checkbox">One-act-play<br>
+                <input type="checkbox">Debate<br>
+                </div><br><br>
+        </label>
+        <label >First-name: 
+        <input type="text"  value="" name = "firstName"><br><br>
+        </label>
+        <label >Last-name: 
+        <input type="text"  value="" name = "lastName"><br><br>
+        </label>
+        <label >Student-ID: 
+        <input type="text" name = "studId" value=""><br><br>
+        </label>
+        <label >Gender: 
+        <input type="radio"  name="n"> Male
+        <input type="radio"  name="n"> Female<br><br>
+        </label>
+        <label >Institute:  
+        <input type="text" name="Institute" value="" ><br><br>
+        </label>
+        <label>Departement:
+        <input type="text" name="Departement" value="" ><br><br>
+        </label>
+        <label>Mobile-no:
+        <input type="number"  value="" min="0000000000" minlength="10"><br><br>
+        </label>
+        <input class="x" type="submit"><br>
+        <input class="x" type="reset"
+    </form>
+</div>
+<script src="Practical-6(iii).js"></script>
+</body>
+</html>
