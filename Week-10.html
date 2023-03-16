@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promise Object usage</title>
 </head>
+
 <body>
     Enter your Value here:<input id="input" type="number">
+    Enter your Server here : <input id="input1" type="text">
+    Enter your Server here : <input id="input2" type="text">
+    Enter your Server here : <input id="input3" type="text">
     <button type="button" onclick="valueEntered()">Enter</button>
     <script>
-        function valueEntered()
-        {
+        function valueEntered() {
             let x = document.getElementById('input').value;
 
-        myPromise = new Promise((resolve,reject)=>{
-                if(x >= 100)
-                {
+            myPromise = new Promise((resolve, reject) => {
+                if (x >= 100) {
                     resolve("You did it.")
                 }
-                else{
+                else {
                     reject("Your cheated.")
                 }
-        });
+            });
 
-        myPromise
-        .then((msg)=>{
-            alert(msg)
-        })
-        .catch((err)=>{
-            alert(err)
-        })
+            myPromise
+                .then((msg) => {
+
+                    const para = document.createElement("p");
+                    const node = document.createTextNode(msg);
+                    para.appendChild(node);
+
+                    const element = document.getElementById("input");
+                    element.appendChild(para);
+                })
+                .catch((err) => {
+                    alert(msg)
+                    const para = document.createElement("p");
+                    const node = document.createTextNode(msg);
+                    para.appendChild(node);
+
+                    const element = document.getElementById("input");
+                    element.appendChild(para);
+                })
+                let p1 = document.getElementById('input1').value;
+                P1 = new Promise((resolve, reject) => {
+                if (p1 == "AWS") {
+                    resolve("done")
+                }
+                else {
+                    reject("error")
+                }
+            });
+            let p2 = document.getElementById('input2').value;
+            P2 = new Promise((resolve, reject) => {
+                if (p2=="Google") {
+                    resolve("You did it.")
+                }
+                else {
+                    reject("Your cheated.")
+                }
+            });
+            let p3 = document.getElementById('input3').value;
+            P3 = new Promise((resolve, reject) => {
+                if (p3=="Azure") {
+                    resolve("You did it.")
+                }
+                else {
+                    reject("Your cheated.")
+                }
+            });
+
+            Promise.all([P1,P2,P3]).then((values)=>alert(values)).catch((reason)=>alert(reason));
         }
 
     </script>
 
 </body>
+
 </html>
