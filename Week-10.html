@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Object usage</title>
+</head>
+<body>
+    Enter your Value here:<input id="input" type="number">
+    <button type="button" onclick="valueEntered()">Enter</button>
+    <script>
+        function valueEntered()
+        {
+            let x = document.getElementById('input').value;
+
+        myPromise = new Promise((resolve,reject)=>{
+                if(x >= 100)
+                {
+                    resolve("You did it.")
+                }
+                else{
+                    reject("Your cheated.")
+                }
+        });
+
+        myPromise
+        .then((msg)=>{
+            alert(msg)
+        })
+        .catch((err)=>{
+            alert(err)
+        })
+        }
+
+    </script>
+
+</body>
+</html>
