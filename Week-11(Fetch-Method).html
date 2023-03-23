@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is My First Webpage for demonstration of Async , Await and Fetch functionality.</h1>
+    <div>
+        Enter your name here : <input type="text" name="name" id="userName">
+        <input type="button" value="enter" id="button" onclick="fetchResult()">
+        <p id="d1"></p>
+        <p id="d2"></p>
+        <p id="d3"></p>
+    </div>
+    <script>
+        function greatestValue(pro,x,apiData)
+        {
+            for (let i = 0; i < 5; i++) {
+                
+                if (pro < apiData.country[i].probability)
+                    x = i;
+            }
+        }
+        // function insertOnUi(name, cid, prob) {
+        //     const para1 = document.createElement("p");
+        //     const node1 = document.createTextNode(name);
+        //     para1.appendChild(node1);
+
+        //     const element1 = document.getElementById("button");
+        //     element1.appendChild(para1);
+
+        // }
+        function clearScreen(id) {
+            document.getElementById(id).value = "";
+        }
+        function setFocus(id) {
+            clearScreen(id);
+            // alert("Focus Called")
+            document.getElementById(id).focus();
+        }
+        function addDataOnUi(apiData,x)
+        {
+            document.getElementById("d1").textContent = apiData.name;
+            document.getElementById("d2").textContent = apiData.country[x].country_id;
+            document.getElementById("d3").textContent = apiData.country[x].probability;
+        }
+        async function fetchResult() {
+            const name = document.getElementById("userName").value;
+            const value = await fetch(`https://api.nationalize.io?name=${name}`);
+            const apiData = await value.json();
+            
+            let pro = apiData.country[0].probability;
+            let x = 0;
+
+            greatestValue(pro,x,apiData);
+            addDataOnUi(apiData,x);
+            //insertOnUi(apiData.name, apiData.country[x].country_id, apiData.country[x].probability);
+            setFocus("userName");
+        }
+    </script>
+</body>
+
+</html>
